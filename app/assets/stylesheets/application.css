@@ -1,0 +1,42 @@
+.header{
+	font-size: 20px;
+	background:url('/assets/park4.jpg');
+	padding-left: 457px;
+}
+
+h1 {
+    color: yellow;
+}
+
+
+.center_tab {
+    background: rgba(0, 0, 0, 0) url("/assets/park6.jpg") repeat scroll 0 0;
+    height: 190px;
+    margin: 66px 0 0 440px;
+    width: 360px;
+      border-radius: 7px;
+}
+
+body {
+	}
+
+a {
+    color: bisque;
+    font-family: arial;
+    font-size: 20px;
+     margin-left: 109px;
+     text-transform: capitalize;
+}
+
+.field {
+    color: windowframe;
+    margin: 12px 0 10px 7px;
+}
+
+
+.button {
+    margin-left: 77px;
+}
+.flash{
+  color: red;
+}

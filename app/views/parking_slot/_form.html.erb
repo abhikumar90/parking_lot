@@ -1,0 +1,19 @@
+<div class="center_tab">
+<%= form_for(:slot) do |f| %>
+
+  <div class="field">
+    <%= f.label :slot_number %><br>
+    <%= f.text_field :slot_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+
+  <div class="button">
+    <%= f.submit "Allocate Slot" %>
+  </div>
+
+<%end%>
+</div>
