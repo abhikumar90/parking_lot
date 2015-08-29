@@ -16,6 +16,10 @@ Rails.application.routes.draw do
   get "exit_park" => "cars#index", :as => "cars_path"
   post "/cars/new" => "cars#create"
 
+  get '/exiting_parking' => "cars#exiting_parking"
+  post "cars/exit_parking" => "cars#exit_parking"
+  post "/reg_no_with_color" => "cars#reg_no_with_color"
+
   post "/parking_slot/new" => "parking_slot#create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

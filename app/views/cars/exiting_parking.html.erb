@@ -1,0 +1,12 @@
+Exiting parking lot
+
+<%= form_tag("cars/exit_parking") do%>
+ <div class="field">
+    Enter ticket no.
+    <%= text_field_tag :ticket_no %>
+  </div>
+
+  <div class="button">
+    <%= submit_tag "Exit Parking" %>
+  </div>
+<% end %>

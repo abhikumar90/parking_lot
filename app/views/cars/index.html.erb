@@ -1,4 +1,10 @@
 <div class="center_tab">
 	<%= link_to "Enter Parking lot", new_car_path %><br /><br />
-	<%= link_to "Exit Parking Lot", cars_path %>
+	<%= link_to "Exit Parking Lot", "/exiting_parking" %>
 </div>
+
+
+<%= form_tag("/reg_no_with_color") %>
+	find registration no of all parked cars with color 
+	<%= text_field_tag :color %>
+<% end %>
