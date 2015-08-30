@@ -11,13 +11,16 @@
   </thead>
 
   <tbody>
-    <% @tickets.each do |ticket| %>
+      <% @parking_slot.each do |park| %>
+        <% cars=Car.where("id = ? and color= ?", park.car_id,params[:color]) %>
+           <% cars.each do |car| %>
       <tr>
-        <td><%= ticket.parking_slot.id %></td>
-        <td><%= ticket.car.registration_number %></td>
-        <td><%= ticket.car.color %></td>
+        <td><%= park.id %></td>
+        <td><%= car.registration_number %></td>
+        <td><%= car.color %></td>
       </tr>
     <% end %>
+  <%end%>
   </tbody>
 </table>
 

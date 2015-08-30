@@ -49,8 +49,9 @@ class CarsController < ApplicationController
   end  
 
   def slot_no_car_color
-    @tickets = Ticket.where(parking_slot_id: params[:parking_slot_no])
-    render :template => "/cars/slot_no_car_color_list"
+    @color = params[:color]
+    @parking_slot = ParkingSlot.where("occupied = ?", true)
+    render :template => "/cars/slot_no_car_color_list" ,:locals => { :color => @color }
   end
 
  private
