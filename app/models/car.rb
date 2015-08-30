@@ -5,7 +5,6 @@ class Car < ActiveRecord::Base
 
   def self.read_input_file(file_path)
      File.open(file_path, "r").each_line do |line|
-  # name: "Angela"    job: "Writer"    ...
         command = line.split(/\s/)[0]
         args = line.split(/\s/) - [line.split(/\s/)[0]]
         Car.send(command, *args)
