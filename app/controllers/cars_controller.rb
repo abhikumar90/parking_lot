@@ -37,16 +37,21 @@ class CarsController < ApplicationController
     redirect_to cars_path
   end
 
-
   def reg_no_with_color
-    color = params[:color]
-    @cars = Car.where(color: color)
-    render :template => ""
+    @cars = Car.where("UPPER(color) = UPPER(?)",params[:color])
+    render :template => "/cars/registration_number"
   end
 
-  def slot_no_with_reg_no
-
+  def slot_no_parking_car
+      @parking_slot = ParkingSlot.where("id = ? and occupied = ?", params[:parking_slot_no], true).first
+      @cars = Car.find_by_id(@parking_slot.car_id)
+    render :template => "/cars/slot_no_parking_car_list"
   end  
+
+  def slot_no_car_color
+    @tickets = Ticket.where(parking_slot_id: params[:parking_slot_no])
+    render :template => "/cars/slot_no_car_color_list"
+  end
 
  private
       

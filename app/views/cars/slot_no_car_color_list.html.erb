@@ -1,0 +1,27 @@
+<h1>Listing Cars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Slot No</th>
+      <th>Registration Number</th>
+      <th>Color</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tickets.each do |ticket| %>
+      <tr>
+        <td><%= ticket.parking_slot.id %></td>
+        <td><%= ticket.car.registration_number %></td>
+        <td><%= ticket.car.color %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div class="button">
+<%= link_to 'Back', "/cars" %>
+</div>

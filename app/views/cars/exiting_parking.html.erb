@@ -1,12 +1,18 @@
-Exiting parking lot
+<div class="center_tab">
+<div class="top_text">Exiting Parking lot</div>
 
 <%= form_tag("cars/exit_parking") do%>
  <div class="field">
-    Enter ticket no.
-    <%= text_field_tag :ticket_no %>
+    <label>Enter ticket no.</label>
+        <%= text_field_tag :ticket_no %>
   </div>
 
   <div class="button">
     <%= submit_tag "Exit Parking" %>
   </div>
 <% end %>
+</div>
+
+<div class="new_button">
+<%= link_to 'Back To Home Page', "/cars" %>
+</div>

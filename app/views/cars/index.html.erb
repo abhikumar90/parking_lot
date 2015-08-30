@@ -4,7 +4,27 @@
 </div>
 
 
-<%= form_tag("/reg_no_with_color") %>
-	find registration no of all parked cars with color 
+<%= form_tag("/reg_no_with_color") do %>
+ <div class="field1">
+	Find registration no of all parked cars with color: 
 	<%= text_field_tag :color %>
+	<%= submit_tag "Search Color" %>
+ </div>
 <% end %>
+
+<%= form_tag("/slot_no_parking_car") do %>
+ <div class="field1">
+	Find Slot number of car with a given registration number is parked: 
+	<%= text_field_tag :parking_slot_no %>
+	<%= submit_tag "Search Number" %>
+ </div>
+<% end %>
+
+<%= form_tag("/slot_no_car_color") do %>
+ <div class="field1">
+	Find Slot numbers of all slots based on car of a particular color:
+	<%= text_field_tag :color %>
+	<%= submit_tag "Search Color" %>
+ </div>
+<% end %>
+

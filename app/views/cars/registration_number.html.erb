@@ -1,0 +1,26 @@
+<h1>Listing Cars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Registration Number</th>
+      <th>Color</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cars.each do |car| %>
+      <tr>
+        <td><%= car.registration_number %></td>
+        <td><%= car.color %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div class="button">
+<%= link_to 'Back', "/cars" %>
+</div>

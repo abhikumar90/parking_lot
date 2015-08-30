@@ -4,11 +4,32 @@
 	padding-left: 457px;
 }
 
+
+.footer2332112 {
+    background: rgba(0, 0, 0, 0) url("/assets/park4.jpg") repeat scroll 0 0;
+    font-size: 20px;
+    padding-bottom: 17px;
+    position: relative;
+    top: 168px;
+}
+
+.footer {
+  background: rgba(0, 0, 0, 0) url("/assets/park4.jpg") repeat scroll 0 0;
+ position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+}
+
 h1 {
     color: yellow;
 }
 
-
+.top_text {
+    color: turquoise;
+    padding-left: 95px;
+}
 .center_tab {
     background: rgba(0, 0, 0, 0) url("/assets/park6.jpg") repeat scroll 0 0;
     height: 190px;
@@ -21,7 +42,7 @@ body {
 	}
 
 a {
-    color: bisque;
+    color: aqua;
     font-family: arial;
     font-size: 20px;
      margin-left: 109px;
@@ -39,4 +60,14 @@ a {
 }
 .flash{
   color: red;
+}
+
+
+.field1 {
+    margin: 27px 0 0 60px;
+}
+
+.new_button {
+    margin-top: 38px;
+    padding-left: 425px;
 }
