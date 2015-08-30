@@ -4,13 +4,19 @@ class CarTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
+test "save car new record" do
+  car = Car.new
+  assert car.save
+end
 
- test "should not save car without color" do
- 	puts "======hello==============="
-  car = Car.create(registration_number: "BR-O6E-4532" ,color: "blue")
-  puts "=====save===car======#{car.inspect}============"
+ test "should compaire with car color" do
+  car = Car.create(registration_number: "BR-O6E-1111" ,color: "blue")
   assert_equal 'blue',car.color
-  puts "=====save===car======#{car.inspect}============"
+end
+
+ test "should compaire with car registration_number" do
+  car = Car.create(registration_number: "BR-O6E-4532" ,color: "red")
+  assert_equal 'BR-O6E-4532',car.registration_number
 end
 
 end
