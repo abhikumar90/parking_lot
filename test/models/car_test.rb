@@ -9,6 +9,11 @@ test "save car new record" do
   assert car.save
 end
 
+test "should check car record nil or not" do
+  car = Car.new
+  assert_nil car.id
+end
+
  test "should compaire with car color" do
   car = Car.create(registration_number: "BR-O6E-1111" ,color: "blue")
   assert_equal 'blue',car.color
