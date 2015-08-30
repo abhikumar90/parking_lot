@@ -10,16 +10,19 @@
   </thead>
 
   <tbody>
+     <% @parking_slot.each do |park| %>
+        <% cars=Car.where("id = ? and UPPER(registration_number) = UPPER(?)", park.car_id,params[:registration_number]) %>
+           <% cars.each do |car| %>
       <tr>
-        <td><%= @parking_slot.id %></td>
-        <% unless @cars.blank? %>
-          <td><%= @cars.registration_number %></td>
-        <% end %>
+        <td><%= park.id %></td>
+        <td><%= car.registration_number %></td>
       </tr>
+    <% end %>
+  <%end%>
   </tbody>
 </table>
-
 <br>
+
 <div class="button">
 <%= link_to 'Back', "/cars" %>
 </div>

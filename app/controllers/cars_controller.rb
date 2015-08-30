@@ -43,9 +43,9 @@ class CarsController < ApplicationController
   end
 
   def slot_no_parking_car
-      @parking_slot = ParkingSlot.where("id = ? and occupied = ?", params[:parking_slot_no], true).first
-      @cars = Car.find_by_id(@parking_slot.car_id)
-    render :template => "/cars/slot_no_parking_car_list"
+      @registration_number = params[:registration_number]
+      @parking_slot = ParkingSlot.where(occupied: true)
+      render :template => "/cars/slot_no_parking_car_list" ,:locals => { :registration_number => @registration_number }
   end  
 
   def slot_no_car_color

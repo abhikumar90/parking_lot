@@ -12,7 +12,7 @@
 
   <tbody>
       <% @parking_slot.each do |park| %>
-        <% cars=Car.where("id = ? and color= ?", park.car_id,params[:color]) %>
+        <% cars=Car.where("id = ? and UPPER(color) = UPPER(?)", park.car_id,params[:color]) %>
            <% cars.each do |car| %>
       <tr>
         <td><%= park.id %></td>
